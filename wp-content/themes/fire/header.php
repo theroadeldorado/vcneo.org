@@ -122,7 +122,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </div>
         </div>
 
-
         <div class="max-w-4xl mx-auto mb-12">
           <p class="text-orange-50 text-lg mb-6">More than $1M in capital and operating funds have been contributed in support of this endeavor, including $450K in capital dollars that have been leveraged to purchase and renovate Lozick Home, purchase a new vehicle for use by fellows and to move forward with the design and development of a new housing village (Phase II) on a 2.5-acre church property adjacent to the BHGH Campus.</p>
 
@@ -134,7 +133,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="max-w-4xl mx-auto text-center">
-          <h2 class="text-orange-50 text-2xl mb-8">Village Collective is an initiative of Boys Hope Girls Hope of Northeastern Ohio<br>
+          <h2 class="text-orange-50 text-lg lg:text-2xl mb-8">Village Collective is an initiative of Boys Hope Girls Hope of Northeastern Ohio<br>
           Tim Grady, Director | <a class="text-purple-300" href="mailto:tgrady@bhgh.org">tgrady@bhgh.org</a> | 216-244-1530</h2>
         </div>
       </div>
