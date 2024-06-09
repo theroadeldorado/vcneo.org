@@ -7,18 +7,19 @@ if (class_exists('AIOWPSecurity_Utility_File')) return;
 
 class AIOWPSecurity_Utility_File {
 
-	// This variable will be an array which will contain all of the files and/or directories we wish to check permissions for
-	public $files_and_dirs_to_check;
-
-	public function __construct() {
-		// Let's initialize our class variable array with all of the files and/or directories we wish to check permissions for.
+	/**
+	 * This function returns an array of all the files and/or directories we wish to check permissions for
+	 *
+	 * @return array - array containing files and/or directories
+	 */
+	public static function get_files_and_dirs_to_check() {
 		// NOTE: we can add to this list in future if we wish
 
 		//Get wp-config.php file path
-		$wp_config_path = AIOWPSecurity_Utility_File::get_wp_config_file_path();
+		$wp_config_path = self::get_wp_config_file_path();
 		$home_path = self::get_home_path();
 
-		$this->files_and_dirs_to_check = array(
+		$file_list = array(
 			array('name' => 'root directory', 'path' => ABSPATH, 'permissions' => '0755'),
 			array('name' => 'wp-includes/', 'path' => ABSPATH."wp-includes", 'permissions' => '0755'),
 			array('name' => '.htaccess', 'path' => $home_path.".htaccess", 'permissions' => '0644'),
@@ -32,6 +33,7 @@ class AIOWPSecurity_Utility_File {
 			//Add as many files or dirs as needed by following the convention above
 		);
 
+		return apply_filters('aiowpsecurity_file_permission_list', $file_list);
 	}
 
 	/**
@@ -125,37 +127,6 @@ class AIOWPSecurity_Utility_File {
 		}
 		return true;
 	}
-
-	/**
-	 * Function which reads entire contents of a file and stores serialized contents into our global_meta table
-	 *
-	 * @param string $src_file_path
-	 * @param string $key_description
-	 * @return void
-	 */
-	public static function backup_file_contents_to_db($src_file_path, $key_description) {
-		global $wpdb, $aio_wp_security;
-		$file_contents = AIOWPSecurity_Utility_File::get_file_contents($src_file_path);
-
-		$payload = serialize($file_contents);
-		$date_time = current_time('mysql');
-		$data = array('date_time' => $date_time, 'meta_key1' => $key_description, 'meta_value2' => $payload);
-
-		//First check if a backup entry already exists in the global_meta table
-		$aiowps_global_meta_tbl_name = AIOWPSEC_TBL_GLOBAL_META_DATA;
-		$resultset = $wpdb->get_row($wpdb->prepare("SELECT * FROM $aiowps_global_meta_tbl_name WHERE meta_key1 = %s", $key_description));
-		if ($resultset) {
-			$where = array('meta_key1' => $key_description);
-			$res = $wpdb->update($aiowps_global_meta_tbl_name, $data, $where);
-		} else {
-			$res = $wpdb->insert($aiowps_global_meta_tbl_name, $data);
-		}
-
-		if (false === $res) {
-			$aio_wp_security->debug_logger->log_debug("AIOWPSecurity_Utility_File::backup_file_contents_to_db() - Unable to write entry to DB", 4);
-		}
-	}
-
 
 	/**
 	 * This function will perform a recursive search for files in the path that match the passed in pattern

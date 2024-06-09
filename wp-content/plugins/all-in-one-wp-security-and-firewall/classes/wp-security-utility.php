@@ -419,7 +419,9 @@ class AIOWPSecurity_Utility {
 
 		$data = apply_filters('aiowps_filter_event_logger_data', $data);
 		//log to database
-		$sql = $wpdb->prepare("INSERT INTO ".$events_table_name." (event_type, username, user_id, event_date, ip_or_host, referer_info, url, event_data, created) VALUES (%s, %s, %d, %s, %s, %s, %s, %s, UNIX_TIMESTAMP())", $data['event_type'], $data['username'], $data['user_id'], $data['event_date'], $data['ip_or_host'], $data['referer_info'], $data['url'], $data['event_data']);
+		$country_code = isset($data['country_code']) ? $data['country_code'] : '';
+		$sql = $wpdb->prepare("INSERT INTO ".$events_table_name." (event_type, username, user_id, event_date, ip_or_host, referer_info, url, event_data, country_code, created) VALUES (%s, %s, %d, %s, %s, %s, %s, %s, %s, UNIX_TIMESTAMP())", $data['event_type'], $data['username'], $data['user_id'], $data['event_date'], $data['ip_or_host'], $data['referer_info'], $data['url'], $data['event_data'], $country_code);
+
 		$result = $wpdb->query($sql);
 		if (false === $result) {
 			$aio_wp_security->debug_logger->log_debug("event_logger: Error inserting record into " . $events_table_name, 4);//Log the highly unlikely event of DB error
@@ -516,6 +518,10 @@ class AIOWPSecurity_Utility {
 
 		$lock_seconds = $lock_minutes * MINUTE_IN_SECONDS;
 		$lock_time = current_time('mysql', true);
+		$ip_lookup_result = AIOS_Helper::get_ip_reverse_lookup($ip);
+		$ip_lookup_result = json_encode($ip_lookup_result);
+		if (false === $ip_lookup_result) $ip_lookup_result = null;
+
 		$release_time = date('Y-m-d H:i:s', time() + ($lock_seconds));
 		$data = array(
 			'user_id' => $user_id,
@@ -524,14 +530,15 @@ class AIOWPSecurity_Utility {
 			'release_date' => $release_time,
 			'failed_login_IP' => $ip,
 			'lock_reason' => $lock_reason,
-			'lock_seconds' => $lock_seconds
+			'lock_seconds' => $lock_seconds,
+			'ip_lookup_result' => $ip_lookup_result
 		);
 		
 		$result = AIOWPSecurity_Utility::add_lockout($data);
 
-		if ($result > 0) {
-		} elseif (false === $result) {
-			$aio_wp_security->debug_logger->log_debug("lock_IP: Error inserting record into " . $login_lockdown_table, 4);//Log the highly unlikely event of DB error
+		if (false === $result) {
+			$error_msg = empty($wpdb->last_error) ? "lock_IP: Error inserting record into " . $login_lockdown_table : $wpdb->last_error;
+			$aio_wp_security->debug_logger->log_debug($error_msg, 4);//Log the highly unlikely event of DB error
 		}
 	}
 	
@@ -1107,6 +1114,40 @@ class AIOWPSecurity_Utility {
 	}
 
 	/**
+	 * This function gets the timezone of the site as a DateTimeZone object
+	 *
+	 * @see https://developer.wordpress.org/reference/functions/wp_timezone/
+	 *
+	 * @return DateTimeZone - the timezone of the site as a DateTimeZone object
+	 */
+	public static function get_wp_timezone() {
+		return new DateTimeZone(self::get_wp_timezone_string());
+	}
+
+	/**
+	 * This function gets the timezone of the site as a string
+	 *
+	 * @see https://developer.wordpress.org/reference/functions/wp_timezone_string/
+	 *
+	 * @return string - PHP timezone name or a ±HH:MM offset
+	 */
+	public static function get_wp_timezone_string() {
+		$timezone_string = get_option('timezone_string');
+		
+		if ($timezone_string) return $timezone_string;
+		
+		$offset  = (float) get_option('gmt_offset');
+		$hours   = (int) $offset;
+		$minutes = ($offset - $hours);
+		$sign    = ($offset < 0) ? '-' : '+';
+		$abs_hour = abs($hours);
+		$abs_mins = abs($minutes * 60);
+		$tz_offset = sprintf('%s%02d:%02d', $sign, $abs_hour, $abs_mins);
+		
+		return $tz_offset;
+	}
+
+	/**
 	 * Converts a Unix timestamp to WP general settings timezone and format. It will also translate with wp_date if available.
 	 *
 	 * @param string $timestamp Optional. Will default to time() if not provided.
@@ -1157,4 +1198,24 @@ class AIOWPSecurity_Utility {
 			}
 		}
 	}
+
+	/**
+	 * Convert a number of bytes into a suitable textual string
+	 *
+	 * @param Integer $size - the number of bytes
+	 *
+	 * @return String - the resulting textual string
+	 */
+	public static function convert_numeric_size_to_text($size) {
+		if ($size > 1073741824) {
+			return round($size / 1073741824, 1).' GB';
+		} elseif ($size > 1048576) {
+			return round($size / 1048576, 1).' MB';
+		} elseif ($size > 1024) {
+			return round($size / 1024, 1).' KB';
+		} else {
+			return round($size, 1).' B';
+		}
+	}
+
 }

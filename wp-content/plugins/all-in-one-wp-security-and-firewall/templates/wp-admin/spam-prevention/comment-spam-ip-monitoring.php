@@ -28,7 +28,7 @@
 					<th scope="row"><?php _e('Enable auto block of spam comment IPs', 'all-in-one-wp-security-and-firewall'); ?>:</th>
 					<td>
 						<div class="aiowps_switch_container">
-							<?php AIOWPSecurity_Utility_UI::setting_checkbox(__('Check this box if you want this plugin to automatically block IP addresses which submit spam comments.', 'all-in-one-wp-security-and-firewall'), 'aiowps_enable_autoblock_spam_ip', '1' == $aio_wp_security->configs->get_value('aiowps_enable_autoblock_spam_ip')); ?>
+							<?php AIOWPSecurity_Utility_UI::setting_checkbox(__('Enable this if you want this plugin to automatically block IP addresses which submit spam comments.', 'all-in-one-wp-security-and-firewall'), 'aiowps_enable_autoblock_spam_ip', '1' == $aio_wp_security->configs->get_value('aiowps_enable_autoblock_spam_ip')); ?>
 						</div>
 					</td>
 				</tr>
@@ -99,7 +99,7 @@
 			$spammer_ip_list->prepare_items();
 			// echo "put table of locked entries here";
 		?>
-		<form id="tables-filter" method="get">
+		<form id="tables-filter" method="post">
 			<!-- For plugins, we also need to ensure that the form posts back to our current page -->
 			<input type="hidden" name="page" value="<?php echo esc_attr($page); ?>" />
 			<input type="hidden" name="tab" value="<?php echo esc_attr($tab); ?>" />

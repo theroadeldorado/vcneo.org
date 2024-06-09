@@ -176,9 +176,9 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu {
 
 					$msg = '<p>' . __('You have successfully enabled the cookie based brute force prevention feature', 'all-in-one-wp-security-and-firewall') . '</p>';
 					$msg .= '<p>' . __('From now on you will need to log into your WP Admin using the following URL:', 'all-in-one-wp-security-and-firewall') . '</p>';
-					$msg .= '<p><strong>'.AIOWPSEC_WP_URL.'/?'.$brute_force_feature_secret_word.'=1</strong></p>';
+					$msg .= '<p><strong>'.AIOWPSEC_WP_URL.'/?'.esc_html($brute_force_feature_secret_word).'=1</strong></p>';
 					$msg .= '<p>' . __('It is important that you save this URL value somewhere in case you forget it, OR,', 'all-in-one-wp-security-and-firewall') . '</p>';
-					$msg .= '<p>' . sprintf(__('simply remember to add a "?%s=1" to your current site URL address.', 'all-in-one-wp-security-and-firewall'), $brute_force_feature_secret_word) . '</p>';
+					$msg .= '<p>' . sprintf(__('simply remember to add a "?%s=1" to your current site URL address.', 'all-in-one-wp-security-and-firewall'), esc_html($brute_force_feature_secret_word)) . '</p>';
 				}
 			} else {
 				$aio_wp_security->configs->set_value('aiowps_enable_brute_force_attack_prevention', '');
@@ -327,39 +327,35 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu {
 				die('Nonce check failed for save whitelist settings.');
 			}
 
-			if (isset($_POST["aiowps_enable_whitelisting"]) && empty($_POST['aiowps_allowed_ip_addresses'])) {
-				$this->show_msg_error(__('You must submit at least one IP address.', 'all-in-one-wp-security-and-firewall'));
-			} else {
-				if (!empty($_POST['aiowps_allowed_ip_addresses'])) {
-					$ip_addresses = $_POST['aiowps_allowed_ip_addresses'];
-					$ip_list_array = AIOWPSecurity_Utility_IP::create_ip_list_array_from_string_with_newline($ip_addresses);
-					$validated_ip_list_array = AIOWPSecurity_Utility_IP::validate_ip_list($ip_list_array, 'whitelist');
-					if (is_wp_error($validated_ip_list_array)) {
-						$result = -1;
-						$this->show_msg_error(nl2br($validated_ip_list_array->get_error_message()));
-					} else {
-						$result = 1;
-						$whitelist_ip_data = implode("\n", $validated_ip_list_array);
-						$aio_wp_security->configs->set_value('aiowps_allowed_ip_addresses', $whitelist_ip_data);
-						$_POST['aiowps_allowed_ip_addresses'] = ''; // Clear the post variable for the banned address list.
-					}
+			if (!empty($_POST['aiowps_allowed_ip_addresses'])) {
+				$ip_addresses = $_POST['aiowps_allowed_ip_addresses'];
+				$ip_list_array = AIOWPSecurity_Utility_IP::create_ip_list_array_from_string_with_newline($ip_addresses);
+				$validated_ip_list_array = AIOWPSecurity_Utility_IP::validate_ip_list($ip_list_array, 'whitelist');
+				if (is_wp_error($validated_ip_list_array)) {
+					$result = -1;
+					$this->show_msg_error(nl2br($validated_ip_list_array->get_error_message()));
 				} else {
 					$result = 1;
-					$aio_wp_security->configs->set_value('aiowps_allowed_ip_addresses', ''); // Clear the IP address config value
+					$whitelist_ip_data = implode("\n", $validated_ip_list_array);
+					$aio_wp_security->configs->set_value('aiowps_allowed_ip_addresses', $whitelist_ip_data);
+					$_POST['aiowps_allowed_ip_addresses'] = ''; // Clear the post variable for the banned address list.
 				}
+			} else {
+				$result = 1;
+				$aio_wp_security->configs->set_value('aiowps_allowed_ip_addresses', ''); // Clear the IP address config value
+			}
 
-				if (1 == $result) {
-					$aio_wp_security->configs->set_value('aiowps_enable_whitelisting', isset($_POST["aiowps_enable_whitelisting"]) ? '1' : '');
-					if ('1' == $aio_wp_security->configs->get_value('aiowps_is_login_whitelist_disabled_on_upgrade')) {
-						$aio_wp_security->configs->delete_value('aiowps_is_login_whitelist_disabled_on_upgrade');
-					}
-					$aio_wp_security->configs->save_config(); //Save the configuration
-
-					// Recalculate points after the feature status/options have been altered
-					$aiowps_feature_mgr->check_feature_status_and_recalculate_points();
-
-					$this->show_msg_settings_updated();
+			if (1 == $result) {
+				$aio_wp_security->configs->set_value('aiowps_enable_whitelisting', isset($_POST["aiowps_enable_whitelisting"]) ? '1' : '');
+				if ('1' == $aio_wp_security->configs->get_value('aiowps_is_login_whitelist_disabled_on_upgrade')) {
+					$aio_wp_security->configs->delete_value('aiowps_is_login_whitelist_disabled_on_upgrade');
 				}
+				$aio_wp_security->configs->save_config(); //Save the configuration
+
+				// Recalculate points after the feature status/options have been altered
+				$aiowps_feature_mgr->check_feature_status_and_recalculate_points();
+
+				$this->show_msg_settings_updated();
 			}
 		}
 
@@ -439,23 +435,19 @@ class AIOWPSecurity_Brute_Force_Menu extends AIOWPSecurity_Admin_Menu {
 
 
 		if (isset($_GET['action'])) { // Do list table form row action tasks
-			if ('temp_block' == $_GET['action']) { // Temp Block link was clicked for a row in list table
-				$nonce_user_cap_result = AIOWPSecurity_Utility_Permissions::check_nonce_and_user_cap($_GET['aiowps_nonce'], '404_log_item_action');
+			$nonce = isset($_GET['aiowps_nonce']) ? $_GET['aiowps_nonce'] : '';
+			$nonce_user_cap_result = AIOWPSecurity_Utility_Permissions::check_nonce_and_user_cap($nonce, '404_log_item_action');
+			
+			if (is_wp_error($nonce_user_cap_result)) {
+				$aio_wp_security->debug_logger->log_debug($nonce_user_cap_result->get_error_message(), 4);
+				die($nonce_user_cap_result->get_error_message());
+			}
 
-				if (is_wp_error($nonce_user_cap_result)) {
-					$aio_wp_security->debug_logger->log_debug($nonce_user_cap_result->get_error_message(), 4);
-					die($nonce_user_cap_result->get_error_message());
-				}
+			if ('temp_block' == $_GET['action']) { // Temp Block link was clicked for a row in list table
 				$event_list_404->block_ip(strip_tags($_GET['ip_address']));
 			}
 
 			if ('blacklist_ip' == $_GET['action']) { //Blacklist IP link was clicked for a row in list table
-				$nonce_user_cap_result = AIOWPSecurity_Utility_Permissions::check_nonce_and_user_cap($_GET['aiowps_nonce'], '404_log_item_action');
-
-				if (is_wp_error($nonce_user_cap_result)) {
-					$aio_wp_security->debug_logger->log_debug($nonce_user_cap_result->get_error_message(), 4);
-					die($nonce_user_cap_result->get_error_message());
-				}
 				$event_list_404->blacklist_ip_address(strip_tags($_GET['ip_address']));
 			}
 

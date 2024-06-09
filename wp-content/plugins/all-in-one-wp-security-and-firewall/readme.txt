@@ -4,8 +4,8 @@ Donate link: https://david.dw-perspective.org.uk/donate
 Tags: security, malware scanning, two factor authentication, firewall, login security
 Requires PHP: 5.6
 Requires at least: 5.0
-Tested up to: 6.4
-Stable tag: 5.2.7
+Tested up to: 6.5
+Stable tag: 5.3.0
 License: GPLv3 or later
 
 Protect your website investment with All-In-One Security (AIOS) – a comprehensive and easy to use security plugin designed especially for WordPress. Featuring login security tools, a cutting-edge firewall and much more.
@@ -211,6 +211,52 @@ Go to the settings menu after you activate the plugin and follow the instruction
 1. Features list.
 
 == Changelog ==
+
+= 5.3.0 - 01/May/2024 =
+
+* FEATURE: Added bulk force logout features for logged in users
+* FIX: An issue with the WooCommerce my account page logout function when the cookie based brute force feature is turned on
+* FIX: Warning undefined array key SCRIPT_FILENAME
+* FIX: Custom redirection after login not working if url contains the redirect_to parameter
+* FIX: List of administrator accounts not showing on the user security page
+* FIX: Issue with cookie based bruteforce prevention solved if salt postfix feature is on.
+* FIX: Fixed country field not showing in the 404 event logs (Premium)
+* FIX: Fixed country field not showing in the smart 404 blocked IP log (Premium)
+* TWEAK: Fixed translation issue not showing as per admin user set language instead of site settings
+* TWEAK: Firewall upgrade changes are applied without access to the admin interface
+* TWEAK: Change the labels for the switches to a more appropriate wording
+* TWEAK: In the file scanner results show the file sizes in a human readable format
+* TWEAK: Updated the default message for attempts to access wp-admin
+* TWEAK: Internal refactor of the update code to improve code clarity.
+* TWEAK: Port the 'Block fake Googlebots' feature to the PHP-based firewall
+* TWEAK: Remove requirement for at least one IP for 'Blacklist', 'Login whitelist' and 'Login lockout IP whitelist' to be enabled.
+* TWEAK: Added error message when a user tries to block their own IP on registration approval
+* TWEAK: Added method to update badge on AJAX call
+* TWEAK: internal refactor of the AIOWPSecurity_Utility_File class to improve code clarity
+* TWEAK: Seasonal notice content update for 2024
+
+= 5.2.9 - 06/Mar/2024 =
+
+* FIX: Remove call to update_event_table_column_to_timestamp in update routine
+* FIX: Remove call to wp_timezone() which is only available in WP 5.3+
+
+= 5.2.8 - 05/Mar/2024 =
+
+* FIX: The user check that affects the Duo authentication plugin
+* FIX: Database update routine is now run without needing to visit the admin interface or each individual site in a multisite
+* FIX: Some settings in the firewall menu not resetting after deactivating and reactivating the plugin.
+* TWEAK: Audit log and 404 events CSV export file date time column is now in a human readable format not unix timestamp
+* TWEAK: Debug log table existing datetime field converted to timestamp to be timezone independent
+* TWEAK: Global meta table existing datetime field converted to timestamp to be timezone independent
+* TWEAK: Permanent block table existing datetime field converted to timestamp to be timezone independent
+* TWEAK: Refactor list item actions to further improve code clarity
+* TWEAK: Removed blacklist admin menu as previously announced
+* TWEAK: Removed miscellaneous admin menu as previously announced
+* TWEAK: Removed various admin menu tabs as previously announced
+* TWEAK: Store IP lookup result for other types of entries in the login lockdown table
+* TWEAK: Update the footer review prompt
+* TWEAK: Max file upload size limit to 250 MB by aiowps_max_allowed_upload_config filter removed
+* TWEAK: Improve comment spam detection to not interfere with other forms
 
 = 5.2.7 - 06/Feb/2024 =
 
@@ -1383,4 +1429,4 @@ those who want to enable the basic firewall but do not have "AllowOverride" opti
 - First commit to the WP repository.
 
 == Upgrade Notice ==
-* 5.2.7: Feature to remove the default readme and wp-config-sample, option to set the Cloudflare Turnstile CAPTCHA theme. Fix a CSRF and non-persistent XSS vulnerability. Various tweaks, fixes and improvements. See changelog for full details. A recommended update for all.
+* 5.3.0: Fixes an issue with the cookie based brute force feature and the WooCommerce plugin. Various tweaks, fixes and improvements. See changelog for full details. A recommended update for all.
