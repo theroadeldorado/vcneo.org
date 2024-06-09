@@ -11,7 +11,7 @@
 
 ?>
 
-  <footer class="text-white bg-gray-500 fire-container">
+  <footer class="text-white bg-gray-500 fire-container hidden">
     <div>
       <div>
         <?php
