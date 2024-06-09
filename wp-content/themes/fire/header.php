@@ -93,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="lg:px-18 mb-12">
-          <img class="rounded-3xl lg:rounded-3xl w-full object-cover" src="https://vcneo.fire/wp-content/uploads/2024/06/Village-2880x1620-1-scaled.jpg" alt="">
+          <img class="rounded-3xl lg:rounded-3xl w-full object-cover" src="https://villagecollect.wpenginepowered.com/wp-content/uploads/2024/06/Village-2880x1620-1-scaled.jpg" alt="">
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
@@ -111,12 +111,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex flex-wrap mb-12 -mx-4">
           <div class="w-full lg:w-1/2 p-4">
             <div class="w-full h-full rounded-3xl overflow-hidden">
-              <img class="h-full w-full object-cover" src="https://vcneo.fire/wp-content/uploads/2024/06/Village-2880x1620-1-scaled.jpg" alt="">
+              <img class="h-full w-full object-cover" src="https://villagecollect.wpenginepowered.com/wp-content/uploads/2024/06/Concrete-House-Photo.jpg" alt="">
             </div>
           </div>
           <div class="w-full lg:w-1/2 p-4 py-8">
             <h2 class="text-orange-50 text-3xl font-bold mb-8">Phase I</h2>
-            <p class="text-orange-50 text-lg">With the conceptual design and pilot phase complete, we are now preparing for the next phase of growth with a goal of shaping the Village of Hope into a self-sustaining entity. Phase I will include hiring key staff [an additional 1-2 FTEs]; developing key partnerships and curriculum for life skills training; and serve the first cohort of 8-10 Fellows. Fellows will be recruited by BHGH through existing partnerships with local high schools as well as through workforce development partners (e.g. Tri-C, MAGNET) and will reside in the Village of Hope housing community with semi-independent living for 24 months. In addition to enrollment in their career training program, Fellows will be part of an intentional community that provides programming focused on gaining the life skills needed for successful independent living, career success, financial stability and ultimately, home ownership. Phase II will involve independent living in Village of Hope housing that enables residents to build equity while focusing on their career and continuing to gain the financial literacy and life skills needed for success. Within 30 months of admission, successful graduates will have attained a debt-free degree/professional certification and be working in a professional, skilled job with accrued equity sufficient to pursue home and car ownership before the age of 25.</p>
+            <p class="text-orange-50 text-lg">With the conceptual design and pilot phase complete, we are now preparing for the next phase of growth with a goal of shaping the Village of Hope into a self-sustaining entity. Phase I will include hiring key staff [an additional 1-2 FTEs]; developing key partnerships and curriculum for life skills training; and serve the first cohort of 8-10 Fellows. Fellows will be recruited by BHGH through existing partnerships with local high schools as well as through workforce development partners (e.g. Tri-C, MAGNET) and will reside in the Village of Hope housing community with semi-independent living for 24 months.</p>
+
+            <p class="text-orange-50 text-lg">In addition to enrollment in their career training program, Fellows will be part of an intentional community that provides programming focused on gaining the life skills needed for successful independent living, career success, financial stability and ultimately, home ownership. Phase II will involve independent living in Village of Hope housing that enables residents to build equity while focusing on their career and continuing to gain the financial literacy and life skills needed for success. Within 30 months of admission, successful graduates will have attained a debt-free degree/professional certification and be working in a professional, skilled job with accrued equity sufficient to pursue home and car ownership before the age of 25.</p>
           </div>
         </div>
 
@@ -128,7 +130,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="lg:px-18 mb-12">
-          <img class="rounded-3xl lg:rounded-3xl w-full object-cover" src="https://vcneo.fire/wp-content/uploads/2024/06/Village-2880x1620-1-scaled.jpg" alt="">
+          <img class="rounded-3xl lg:rounded-3xl w-full object-cover" src="https://villagecollect.wpenginepowered.com/wp-content/uploads/2024/06/Village-screenshot-Mar-22-scaled.webp" alt="">
         </div>
 
         <div class="max-w-4xl mx-auto text-center">
