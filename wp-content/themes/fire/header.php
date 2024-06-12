@@ -111,7 +111,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <div class="flex flex-wrap mb-12 -mx-4">
           <div class="w-full lg:w-1/2 p-4">
             <div class="w-full h-full rounded-3xl overflow-hidden">
-              <img class="h-full w-full object-cover" src="https://villagecollect.wpenginepowered.com/wp-content/uploads/2024/06/Concrete-House-Photo.jpg" alt="">
+              <img class="h-full w-full object-cover" src="https://villagecollect.wpenginepowered.com/wp-content/uploads/2024/06/IMG_8172-scaled-e1718222616626.jpeg" alt="">
             </div>
           </div>
           <div class="w-full lg:w-1/2 p-4 py-8">
