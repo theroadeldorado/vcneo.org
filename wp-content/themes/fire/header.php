@@ -87,9 +87,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div>
     <section class="bg-purple-900 py-6">
       <div class="container px-4 mx-auto">
-        <div class="max-w-4xl mb-12 mx-auto text-center">
-          <h1 class="lg:px-18 text-white text-5xl lg:text-7xl font-bold font-heading mb-8 mt-14">Village Collective Northeast Ohio</h1>
-          <p class="text-orange-50 text-lg ">We are driven to transform the landscape of learning into a captivating journey of excitement and discovery. Our aim is to infuse every educational experience with the essence of joy.</p>
+        <div class="max-w-6xl mb-12 mx-auto text-center">
+          <h1 class="lg:px-18 text-white text-5xl lg:text-7xl text-pretty font-bold font-heading mb-8 mt-14">Village Collective Northeast Ohio</h1>
+          <p class="text-orange-50 text-lg">Village Collective is an intentional community that provides programming and supportive services focused on gaining the life skills needed for successful independent living, career success, financial stability and ultimately, home ownership. Through these services, each participant is surrounded by a “village” that supports them in attaining career and life success.</p>
         </div>
 
         <div class="lg:px-18 mb-12">
@@ -97,7 +97,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="max-w-4xl mx-auto mb-12">
-          <h2 class="text-orange-50 text-2xl mb-8">Village Collective is an intentional community that provides programming and supportive services focused on gaining the life skills needed for successful independent living, career success, financial stability and ultimately, home ownership. Through these services, each participant is surrounded by a “village” that supports them in attaining career and life success.</h2>
+          <h2 class="text-orange-50 text-2xl mb-8">Village Collective is a non-profit initiative that empowers 18-24 year-old adults to gain the professional skills they need to secure a meaningful and sustaining career with a family-supporting salary through the provision of stable housing in an intentional community while building equity and skills focused on home ownership.
+          </h2>
 
           <p class="text-orange-50 text-lg mb-6">2019-2020 marked the beginning of an exciting new initiative focused on our Scholars’ career planning and successful career launch. With recognition that some of our Scholars will be most successful pursuing an alternative post-secondary pathway that does not involve a four-year degree, we applied the hallmark ‘holistic approach’ of our mission to supporting Scholars pursuing professional certifications, apprenticeships and other career training alternatives to college. Participants in this program, our Fellows, receive individualized monthly coaching and case management as well as guidance and connection to pre-professional programs and employment opportunities.</p>
 
