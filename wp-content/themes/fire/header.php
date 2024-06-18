@@ -88,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <section class="bg-purple-900 py-6">
       <div class="container px-4 mx-auto">
         <div class="max-w-6xl mb-12 mx-auto text-center">
-          <h1 class="lg:px-18 text-white text-5xl lg:text-7xl text-pretty font-bold font-heading mb-8 mt-14">Village Collective Northeast Ohio</h1>
+          <h1 class="lg:px-18 text-white text-5xl lg:text-7xl text-balanced font-bold font-heading mb-8 mt-14">Village Collective Northeast Ohio</h1>
           <p class="text-orange-50 text-lg">Village Collective is an intentional community that provides programming and supportive services focused on gaining the life skills needed for successful independent living, career success, financial stability and ultimately, home ownership. Through these services, each participant is surrounded by a “village” that supports them in attaining career and life success.</p>
         </div>
 
