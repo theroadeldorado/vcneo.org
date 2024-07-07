@@ -122,94 +122,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <section class="py-12 md:py-20 bg-tan">
-    <div class="container mx-auto px-4">
-      <div class="max-w-lg lg:max-w-6xl mx-auto">
-        <div class="flex flex-wrap -mx-4 items-center">
-          <div class="w-full lg:w-1/2 px-4 mb-16 lg:mb-0">
-            <div class="max-w-md">
-              <h2 class="lg:max-w-md text-6xl sm:text-7xl mb-8">Get started quickly</h2>
-              <p class="text-xl mb-10">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable.</p>
-              <a class="group inline-flex items-center leading-none font-medium pb-2 border-b-2 border-black" href="#">
-                <span class="mr-4">See more</span>
-                <span class="group-hover:rotate-45 transform transition duration-100">
-                  <svg width="11" height="11" viewbox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M9.5 1.5L1.5 9.5" stroke="black" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                    <path d="M9.5 8.83571V1.5H2.16429" stroke="black" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  </svg>
-                </span>
-              </a>
-            </div>
-          </div>
-          <div class="w-full lg:w-1/2 px-4">
-            <img class="block lg:ml-auto rounded-[3rem]" src="https://images.unsplash.com/photo-1719216324845-53224baf1ea3?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="relative bg-black aspect-video w-full">
     <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1719216324845-53224baf1ea3?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
   </section>
 
-  <section class="py-12 md:py-24 bg-coolGray-50">
-    <div class="container mx-auto px-4">
-      <div class="max-w-md mx-auto lg:max-w-none">
-        <h1 class="font-heading text-6xl md:text-10xl tracking-tighter mb-20">Stats</h1>
-        <div class="flex flex-wrap -mx-3">
-          <div class="w-full lg:w-1/3 px-3 mb-6 lg:mb-0">
-            <a class="relative  block h-full w-full px-9 py-14 border-black border rounded-[3rem] transition duration-300" href="#">
-              <span class="hidden absolute top-0 right-0 mt-16 mr-8">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 2L2 22" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M22 20.3393V2H3.66071" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </span>
-              <div>
-                <div class="max-w-xs pr-10">
-                  <h5 class="text-3xl xs:text-4xl  mb-6">De-risking your project</h5>
-                </div>
-                <p class="">We follow the RIBA Plan of Work 2020 to ensure an orderly framework and project clarity from the outset. First, we conduct feasibility studies and a project review.</p>
-              </div>
-            </a>
-          </div>
-          <div class="w-full lg:w-1/3 px-3 mb-6 lg:mb-0">
-            <a class="relative block h-full w-full px-9 py-14 border-black border rounded-[3rem] transition duration-300" href="#">
-              <span class="hidden absolute top-0 right-0 mt-16 mr-8">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 2L2 22" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M22 20.3393V2H3.66071" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </span>
-              <div>
-                <div class="max-w-xs pr-10">
-                  <h5 class="text-3xl xs:text-4xl  mb-6">Planning strategies</h5>
-                </div>
-                <p class="">This process is led either by a chartered planning consultant or chartered architect and entails the preparation of concept designs and planning strategies.</p>
-              </div>
-            </a>
-          </div>
-          <div class="w-full lg:w-1/3 px-3">
-            <a class="relative block h-full w-full px-9 py-14 border-black border rounded-[3rem] transition duration-300" href="#">
-              <span class="hidden absolute top-0 right-0 mt-16 mr-8">
-                <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M22 2L2 22" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                  <path d="M22 20.3393V2H3.66071" stroke="white" stroke-width="3.25" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
-              </span>
-              <div>
-                <div class="max-w-xs pr-10">
-                  <h5 class="text-3xl xs:text-4xl  mb-6">Return on investment</h5>
-                </div>
-                <p class="">During this phase the design is developed to meet the required technical standards to meet building regulations and incorporate sustainability strategies.</p>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="py-12 md:py-24 bg-blue-500 text-white">
     <div class="container mx-auto px-4">

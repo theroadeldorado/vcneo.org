@@ -6,18 +6,19 @@
   $title = get_sub_field('title');
   $style = get_sub_field('style');
   $subheading = get_sub_field('subheading');
-  $buttons = get_sub_field('buttons');
+  $bg_style = get_sub_field('bg_style');
 
   $section->add_classes([
-    'py-12 md:py-20 lg:py-24 bg-blue-500 relative'
+    'py-12 md:py-20 lg:py-24 min-h-[600px] relative flex items-center justify-center',
+    $bg_style === 'blue' ? 'bg-blue-500' : 'bg-green-500'
   ]);
 ?>
 
 <?php $section->start(); ?>
-  <div class="container mx-auto px-4 relative z-[2]">
-    <div class="text-center">
+  <div class="container w-full  mx-auto px-4 relative z-[2]">
+    <div class="text-center w-full">
       <?php if($kicker):?>
-        <span class="kicker block text-white">Lorem Ipsum</span>
+        <span class="kicker block text-white mb-2">Lorem Ipsum</span>
       <?php endif; ?>
 
       <?php if($title):?>
@@ -30,26 +31,17 @@
         </div>
       <?php endif; ?>
 
-      <div class="flex items-center justify-center gap-8">
-        <a class="button-tan group" href="#">
-          <span class="mr-2.5">Learn More</span>
-          <span class="group-hover:rotate-45 transform transition duration-75">
-            <svg width="10" height="11" viewbox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 1.5L1 9.5" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M9 8.83571V1.5H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </span>
-        </a>
-        <a class="button-tan group" href="#">
-          <span class="mr-2.5">Donate</span>
-          <span class="group-hover:rotate-45 transform transition duration-75">
-            <svg width="10" height="11" viewbox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M9 1.5L1 9.5" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-              <path d="M9 8.83571V1.5H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-            </svg>
-          </span>
-        </a>
-      </div>
+      <?php if( have_rows('buttons') ):?>
+        <div class="flex items-center justify-center gap-8">
+          <?php while ( have_rows('buttons') ) : the_row();
+            $button = get_sub_field('button'); ?>
+            <a class="group <?php echo $bg_style === 'blue' ? 'button-tan' : 'button-tan-green';?>" href="<?php echo $button['url'];?>">
+             <?php echo $button['title'];?>
+            </a>
+          <?php endwhile; ?>
+        </div>
+      <?php endif; ?>
+
     </div>
   </div>
   <?php if($video):?>

@@ -15,10 +15,10 @@
   }
 
   .heading-1 {
-    @apply text-5xl md:text-8xl xl:text-[8rem] tracking-tighter;
+    @apply text-3xl md:text-6xl xl:text-8xl tracking-tighter;
   }
   .heading-2 {
-    @apply text-3xl md:text-6xl xl:text-8xl tracking-tighter;
+    @apply text-2xl md:text-4xl xl:text-6xl tracking-tighter;
   }
   .heading-3 {
     @apply text-xl md:text-3xl xl:text-5xl tracking-tighter;
@@ -33,11 +33,11 @@
     @apply text-base md:text-lg xl:text-xl tracking-tight;
   }
   .kicker {
-    @apply text-sm;
+    @apply text-sm uppercase tracking-widest font-bold;
   }
 
   .prose {
-    @apply px-4;
+    @apply p-4 bg-white;
   }
 
   .prose,
@@ -57,7 +57,8 @@
     .heading-2,
     .heading-3,
     .heading-4,
-    .heading-5 {
+    .heading-5,
+    .heading-6 {
       @apply mb-8 last:mb-0;
     }
 

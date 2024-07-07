@@ -11,7 +11,7 @@
   .button {
     @apply inline-flex items-center justify-center py-5 px-8;
     @apply rounded-full;
-    @apply font-medium text-white leading-none no-underline;
+    @apply font-bold text-white leading-none no-underline;
     @apply transition-all duration-200 cursor-pointer;
     @apply bg-blue-500;
 
@@ -29,6 +29,17 @@
       &:active,
       &:hover {
         @apply hover:text-white outline-none hover:bg-blue-500;
+      }
+    }
+
+    &-tan-green {
+      @apply button-tan;
+      @apply bg-tan text-green-500;
+
+      &:focus,
+      &:active,
+      &:hover {
+        @apply hover:text-white outline-none hover:bg-green-500;
       }
     }
 

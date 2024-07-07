@@ -17,6 +17,38 @@
                 "id": ""
             },
             "layouts": {
+                "layout_6689eec9ad3be": {
+                    "key": "layout_6689eec9ad3be",
+                    "name": "copy_with_image",
+                    "label": "Copy with image",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6689eec9ad3c0",
+                            "label": "Copy with image",
+                            "name": "copy_with_image",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_6689edf298c16"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5eb2daeeb6582": {
                     "key": "layout_5eb2daeeb6582",
                     "name": "hero",
@@ -39,6 +71,38 @@
                             },
                             "clone": [
                                 "group_5eb2da339dd77"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_668adab2e823b": {
+                    "key": "layout_668adab2e823b",
+                    "name": "stats",
+                    "label": "Stats",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_668adab2e823d",
+                            "label": "Stats",
+                            "name": "stats",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_668ad8d7de60d"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -73,5 +137,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1712775262
+    "modified": 1720376010
 }

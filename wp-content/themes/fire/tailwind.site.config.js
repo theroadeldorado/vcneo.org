@@ -10,6 +10,12 @@ module.exports = {
       pattern: /(mt|mb)-gap-(0|xs|sm|md|lg|xl)/,
       variants: ['lg', 'md'],
     },
+    'text-base',
+    'text-md',
+    'text-lg',
+    'text-xl',
+    'text-2xl',
+    'text-3xl',
   ],
   theme: {
     screens: {

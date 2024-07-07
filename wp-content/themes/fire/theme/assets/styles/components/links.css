@@ -12,6 +12,12 @@
     @apply inline-flex items-center;
     @apply leading-none tracking-wide no-underline font-body;
     @apply transition-all duration-200 cursor-pointer;
+    @apply font-bold underline-offset-4 decoration-2 underline;
+
+    &:hover,
+    &:active {
+      @apply text-green-500;
+    }
 
     svg {
       @apply w-4;
@@ -25,12 +31,22 @@
       }
     }
 
-    &-primary {
-      @apply text-gray-500;
+    &-green {
+      @apply link;
+      @apply text-green-500;
 
       &:hover,
       &:active {
-        @apply text-gray-700;
+        @apply text-green-300;
+      }
+    }
+
+    &-blue {
+      @apply link;
+      @apply text-blue-500;
+      &:hover,
+      &:active {
+        @apply text-blue-300;
       }
     }
   }
