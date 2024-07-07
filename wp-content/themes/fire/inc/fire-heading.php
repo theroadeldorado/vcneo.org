@@ -11,6 +11,11 @@
  * @param String $class classes for heading
  */
 class Fire_Heading {
+  // Declare properties explicitly
+  private $tag;
+  private $text;
+  private $class;
+
   public function __construct($tag = 'h2', $text = '', $class = '') {
     $this->tag = $tag;
     $this->text = $text;
@@ -23,7 +28,6 @@ class Fire_Heading {
    *
    */
   private function echo_heading() {
-
     if (isset($this->text)) {
       $dom = new DOMImplementation();
       $document = $dom->createDocument(null, 'html', $dom->createDocumentType('html'));
@@ -32,10 +36,7 @@ class Fire_Heading {
       $divInner = $document->createDocumentFragment();
       $divInner->appendXML(str_replace('&', '&amp;', $this->text));
 
-      if ($appendResult === false) {
-        return;
-      }
-
+      // Removed the check for $appendResult as it's unnecessary
       $div->appendChild($divInner);
       echo $document->saveHTML($div);
     } else {

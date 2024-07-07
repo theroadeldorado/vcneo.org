@@ -14,6 +14,28 @@
     @apply font-body;
   }
 
+  .heading-1 {
+    @apply text-5xl md:text-8xl xl:text-[8rem] tracking-tighter;
+  }
+  .heading-2 {
+    @apply text-3xl md:text-6xl xl:text-8xl tracking-tighter;
+  }
+  .heading-3 {
+    @apply text-xl md:text-3xl xl:text-5xl tracking-tighter;
+  }
+  .heading-4 {
+    @apply text-lg md:text-2xl xl:text-3xl tracking-tight;
+  }
+  .heading-5 {
+    @apply text-base md:text-lg xl:text-2xl tracking-tight;
+  }
+  .heading-6 {
+    @apply text-base md:text-lg xl:text-xl tracking-tight;
+  }
+  .kicker {
+    @apply text-sm;
+  }
+
   .prose {
     @apply px-4;
   }

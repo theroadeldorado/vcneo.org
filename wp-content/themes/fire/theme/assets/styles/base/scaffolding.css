@@ -1,4 +1,7 @@
 @layer base {
+  body {
+    @apply bg-tan;
+  }
   .site {
     @apply flex flex-col min-h-screen;
 

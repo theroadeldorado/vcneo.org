@@ -1,12 +1,12 @@
 @layer components {
-  a {
+  /* a {
     @apply text-gray-500 underline;
     @apply transition-all duration-200 cursor-pointer;
 
     &:focus-visible {
       outline: thin dotted theme(colors.gray.400);
     }
-  }
+  } */
 
   .link {
     @apply inline-flex items-center;

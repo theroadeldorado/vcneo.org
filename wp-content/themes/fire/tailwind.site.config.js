@@ -36,9 +36,6 @@ module.exports = {
     fontFamily: {
       body: ['Open Sans', 'Arial', 'sans-serif'],
     },
-    // fontSize: {
-    //   // removes bases sizes
-    // },
     fontWeight: {
       thin: 200,
       light: 300,
@@ -49,42 +46,14 @@ module.exports = {
     },
     extend: {
       colors: {
-        cream: '#f0eae4',
+        tan: '#F2E0D0',
         blue: {
-          50: '#EFF8FF',
-          100: '#DAEEFF',
-          200: '#BEE1FF',
-          300: '#91D0FF',
-          400: '#5DB5FD',
-          500: '#3895FA',
-          600: '#2176EF',
-          700: '#195FDC',
-          800: '#1B4DB2',
-          900: '#1C448C',
+          300: '#85BFF2',
+          500: '#35428C',
         },
         green: {
-          50: '#f4fce9',
-          100: '#e6f7d0',
-          200: '#e6f7d0',
-          300: '#aee472',
-          400: '#90d447',
-          500: '#65a624',
-          600: '#55941c',
-          700: '#42711a',
-          800: '#375a1a',
-          900: '#304d1a',
-        },
-        purple: {
-          50: '#f2f5fc',
-          100: '#e1e9f8',
-          200: '#cad9f3',
-          300: '#a6c0ea',
-          400: '#7ca0de',
-          500: '#5d80d4',
-          600: '#4965c7',
-          700: '#3f54b6',
-          800: '#35428c',
-          900: '#323d76',
+          300: '#65A624',
+          500: '#267302',
         },
       },
       spacing: {
