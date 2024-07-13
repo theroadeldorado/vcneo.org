@@ -124,39 +124,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 
 
-  <section class="relative bg-black aspect-video w-full">
-    <img class="absolute inset-0 w-full h-full object-cover" src="https://images.unsplash.com/photo-1719216324845-53224baf1ea3?q=80&w=2828&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-  </section>
 
 
 
-  <section class="py-12 md:py-24 bg-blue-500 text-white">
-    <div class="container mx-auto px-4">
-      <div class="max-w-[1200px] mx-auto text-center">
-        <div class="flex items-center justify-center mb-10">
-          <div class="mr-6">
-            <div class="animate-bounceSlow inline-flex p-2 w-16 h-16 xs:w-18 xs:h-18 items-center justify-center bg-white rounded-2xl" style="animation-direction: reverse;">
-              <img src="asitrastudio-assets/logo-clouds/win-sm.png" alt="">
-            </div>
-          </div>
-          <div class="mr-6">
-            <div class="animate-bounceSlow inline-flex p-2 w-16 h-16 xs:w-18 xs:h-18 items-center justify-center bg-white rounded-2xl" style="animation-direction: reverse; animation-delay: 0.3s;">
-              <img src="asitrastudio-assets/logo-clouds/pp-sm.png" alt="">
-            </div>
-          </div>
-          <div class="mr-6">
-            <div class="animate-bounceSlow inline-flex p-2 w-16 h-16 xs:w-18 xs:h-18 items-center justify-center bg-white rounded-2xl" style="animation-direction: reverse; animation-delay: 0.5s;">
-              <img src="asitrastudio-assets/logo-clouds/spotify-sm.png" alt="">
-            </div>
-          </div>
-          <div>
-            <div class="animate-bounceSlow inline-flex p-2 w-16 h-16 xs:w-18 xs:h-18 items-center justify-center bg-white rounded-2xl" style="animation-direction: reverse; animation-delay: 0.8s;">
-              <img src="asitrastudio-assets/logo-clouds/visa-sm.png" alt="">
-            </div>
-          </div>
-        </div>
-        <h2 class="heading-2 mb-6">Follow us on Social</h2>
-        <p class="max-w-md mx-auto text-coolGray-600">Stay up-to-date with everything at Village Collective.</p>
-      </div>
-    </div>
-  </section>
+
