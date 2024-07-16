@@ -1,4 +1,7 @@
 <?php
+  $tag = get_sub_field('tag');
+  $title = get_sub_field('title');
+  $style = get_sub_field('style');
   $team_members = get_sub_field('team_members');
   $section->add_classes([
     'py-12 md:py-20 bg-coolGray-50 overflow-hidden'
@@ -10,7 +13,9 @@
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap -mx-4 items-center mb-20">
         <div class="w-full lg:w-8/12 xl:w-1/2 px-4 mb-8 lg:mb-0">
-          <h1 class="font-heading text-6xl md:text-10xl tracking-tighter">Meet the team</h1>
+          <?php if($title):?>
+            <?php new Fire_Heading($tag, $title, $style); ;?>
+          <?php endif; ?>
         </div>
         <div class="w-full lg:w-4/12 xl:w-1/2 px-4">
           <div class="flex items-center justify-end">
@@ -44,7 +49,7 @@
           ?>
             <div class="flex-shrink-0 mr-6 xl:mr-12 w-full max-w-md">
               <?php if($image):?>
-                <img class="block mb-8" src="<?php echo $image['image'];?>" alt="<?php echo $image['alt'];?>">
+                <?php echo ResponsivePics::get_picture($image['id'], 'sm:400 300|f, md:400 300|f, lg:800 600|f', 'block mb-8', true, true); ?>
               <?php endif; ?>
               <div class="max-w-sm">
                 <?php if($title):?>
@@ -54,7 +59,7 @@
                   <h4 class="text-3xl mt-1 mb-6"><?php echo $name;?></h4>
                 <?php endif; ?>
                 <?php if($short_bio):?>
-                  <div class="text-lg text-coolGray-500 wizzy"><?php $short_bio;?></div>
+                  <div class="text-sm text-coolGray-500 wizzy"><?php echo $short_bio;?></div>
                 <?php endif; ?>
               </div>
             </div>

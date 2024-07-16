@@ -69,22 +69,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               'container' => false,
               'depth' => 2,
               'theme_location' => 'primary',
-              'menu_class' => 'hidden lg:flex ml-12 mr-auto items-center',
-              'item_0' => 'item_class',
-              'link_0' => 'inline-block hover:underline mr-10',
-              'submenu_0' => 'submenu',
+              'menu_class' => 'hidden lg:flex ml-12 mr-auto gap-5 items-center grow justify-end',
+              'item_0' => 'item_class relative group',
+              'link_0' => 'inline-block hover:underline',
+              'link_1' => 'inline-block hover:underline',
+              'submenu_0' => 'submenu absolute pointer-events-none opacity-0 group-hover:opacity-100 group-hover:pointer-events-auto duration-200 ease-in-out flex flex-col z-[1001] gap-2 top-full -left-4 w-[200px] bg-blue-500 text-white shadow-lg pt-10 pb-2 px-4',
             ]);
           ?>
-          <a class="mr-8 hidden lg:inline-block hover:underline leading-none" href="#">Sign in</a>
-          <a class="button-outline-white group" href="#">
-            <span class="mr-2">Sign up</span>
-            <span class="group-hover:rotate-45 transform transition duration-100">
-              <svg width="10" height="10" viewbox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M9 1L1 9" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-                <path d="M9 8.33571V1H1.66429" stroke="currentColor" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"></path>
-              </svg>
-            </span>
-          </a>
         </div>
       </div>
     </nav>
@@ -112,10 +103,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             'submenu_0' => 'flex-col',
           ]);
         ?>
-        <div>
-          <a class="block mb-3 px-4 py-4 text-center font-medium text-black hover:text-white border border-black hover:bg-black rounded-full transition duration-200" href="#">Login</a>
-          <a class="block px-4 py-4 text-center font-medium text-white bg-blue-500 hover:bg-blue-600 rounded-full transition duration-200" href="#">Sign in</a>
-        </div>
       </nav>
     </div>
   </header>

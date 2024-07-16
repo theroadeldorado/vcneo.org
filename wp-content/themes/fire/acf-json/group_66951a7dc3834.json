@@ -21,6 +21,28 @@
             "selected": 0
         },
         {
+            "key": "field_6695d7ded5f9d",
+            "label": "Heading",
+            "name": "heading",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_6689e4aea58c7"
+            ],
+            "display": "seamless",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0
+        },
+        {
             "key": "field_66951a89a8323",
             "label": "Team Members",
             "name": "team_members",
@@ -107,5 +129,5 @@
     "active": false,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721047725
+    "modified": 1721096180
 }
