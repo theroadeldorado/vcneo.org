@@ -25,8 +25,8 @@
             array(
               'container'       => false,
               'depth'           => 1,
-              'theme_location'  => 'flex flex-wrap -mb-2 items-center lg:justify-end gap-14',
-              'menu_class'      => 'menu_class',
+              'theme_location'  => 'footer',
+              'menu_class'      => 'menu_class [&>ul]:flex [&>ul]:flex-wrap [&>ul]:-mb-2 [&>ul]:items-center [&>ul]:lg:justify-end [&>ul]:gap-14',
               'link_class'      => 'inline-block text-white hover:text-coolGray-400',
               'item_class'      => 'mb-2 mr-14',
             )
