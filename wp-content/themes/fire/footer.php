@@ -26,7 +26,7 @@
             <p class="text-white text-xl mt-6 block"><?php echo $address;?></p>
           <?php endif; ?>
           <?php if($phone_number):?>
-            <a class="link !text-white mt-4 block" href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a>
+            <a class="link !text-white mt-4 inline-block" href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a>
           <?php endif; ?>
 
         </div>
