@@ -54,12 +54,14 @@
          <?php if($social_links) :?>
             <div class="flex flex-wrap items-center justify-end mb-10 gap-6 px-4">
               <?php  foreach ($social_links as $platform => $link):?>
-                <a class="block text-white no-underline hover:scale-110 duration-200 ease-in-out" target="_blank" href="<?php echo $link;?>">
-                  <span class="inline-flex p-2 w-10 h-10 items-center justify-center bg-white rounded-md text-black">
-                    <?php new Fire_SVG('icon--social-' . $platform); ?>
-                    <span class="sr-only"><?php echo $platform; ?></span>
-                  </span>
-                </a>
+                <?php if($link):?>
+                  <a class="block text-white no-underline hover:scale-110 duration-200 ease-in-out" target="_blank" href="<?php echo $link;?>">
+                    <span class="inline-flex p-2 w-10 h-10 items-center justify-center bg-white rounded-md text-black">
+                      <?php new Fire_SVG('icon--social-' . $platform); ?>
+                      <span class="sr-only"><?php echo $platform; ?></span>
+                    </span>
+                  </a>
+                <?php endif; ?>
               <?php endforeach; ?>
             </div>
           <?php endif; ?>
