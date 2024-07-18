@@ -14,7 +14,7 @@
 <?php $section->start(); ?>
   <div class="container mx-auto px-4">
     <div class="max-w-xl lg:max-w-none mx-auto">
-      <div class="flex flex-wrap -mx-4 items-center">
+      <div class="flex flex-wrap -mx-4 items-start">
         <div class="w-full lg:w-5/12 px-4 mb-20 lg:mb-0">
           <div class="max-w-lg">
             <?php if($title):?>
