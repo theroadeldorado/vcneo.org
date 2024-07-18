@@ -9,7 +9,7 @@
 
 <?php $section->start(); ?>
 
-  <div class="container wizzy ">
+  <div class="container wizzy">
     <div class="<?php echo $style === 'small' ? 'mx-auto max-w-3xl' : '';?>">
       <?php echo $copy; ?>
     </div>

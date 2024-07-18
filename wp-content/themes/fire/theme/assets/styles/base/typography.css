@@ -119,7 +119,7 @@
     }
 
     iframe {
-      @apply h-auto max-w-full aspect-[16/9];
+      @apply h-auto max-w-full w-full aspect-[16/9];
     }
 
     table {
