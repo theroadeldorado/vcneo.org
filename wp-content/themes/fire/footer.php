@@ -23,7 +23,7 @@
             <span class="sr-only"><?php bloginfo( 'name' ); ?></span>
           </a>
           <?php if($address):?>
-            <p class="text-white text-2xl mt-6 block"><?php echo $address;?></p>
+            <p class="text-white text-xl mt-6 block"><?php echo $address;?></p>
           <?php endif; ?>
           <?php if($phone_number):?>
             <a class="link !text-white mt-4 block" href="tel:<?php echo $phone_number;?>"><?php echo $phone_number;?></a>
