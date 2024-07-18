@@ -49,7 +49,7 @@
           ?>
             <div class="flex-shrink-0 mr-6 xl:mr-12 w-full max-w-md">
               <?php if($image):?>
-                <?php echo ResponsivePics::get_picture($image['id'], 'sm:400 300|f, md:400 300|f, lg:800 600|f', 'block mb-8', true, true); ?>
+                <?php echo ResponsivePics::get_picture($image['id'], 'sm:400 300|f, md:400 300|f, lg:800 600|f', 'block mb-8 overflow-hidden rounded-t-[3rem]', true, true); ?>
               <?php endif; ?>
               <div class="max-w-sm">
                 <?php if($title):?>

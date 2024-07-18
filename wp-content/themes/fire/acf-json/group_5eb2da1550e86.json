@@ -81,6 +81,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_6692936a6d3f4": {
+                    "key": "layout_6692936a6d3f4",
+                    "name": "full_width_media",
+                    "label": "Full Width Media",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_6692936a6d3f6",
+                            "label": "Full Width Media",
+                            "name": "full_width_media",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_669291fcdd949"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_5eb2daeeb6582": {
                     "key": "layout_5eb2daeeb6582",
                     "name": "hero",
@@ -103,6 +135,38 @@
                             },
                             "clone": [
                                 "group_5eb2da339dd77"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
+                "layout_66986d58874be": {
+                    "key": "layout_66986d58874be",
+                    "name": "logos",
+                    "label": "Logos",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_66986d58874c0",
+                            "label": "Logos",
+                            "name": "logos",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_66986c1187c3c"
                             ],
                             "display": "seamless",
                             "layout": "block",
@@ -177,38 +241,6 @@
                     "min": "",
                     "max": ""
                 },
-                "layout_6692936a6d3f4": {
-                    "key": "layout_6692936a6d3f4",
-                    "name": "full_width_media",
-                    "label": "Full Width Media",
-                    "display": "block",
-                    "sub_fields": [
-                        {
-                            "key": "field_6692936a6d3f6",
-                            "label": "Full Width Media",
-                            "name": "full_width_media",
-                            "aria-label": "",
-                            "type": "clone",
-                            "instructions": "",
-                            "required": 0,
-                            "conditional_logic": 0,
-                            "wrapper": {
-                                "width": "",
-                                "class": "",
-                                "id": ""
-                            },
-                            "clone": [
-                                "group_669291fcdd949"
-                            ],
-                            "display": "seamless",
-                            "layout": "block",
-                            "prefix_label": 0,
-                            "prefix_name": 0
-                        }
-                    ],
-                    "min": "",
-                    "max": ""
-                },
                 "layout_66951bf44d088": {
                     "key": "layout_66951bf44d088",
                     "name": "team",
@@ -265,5 +297,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721048078
+    "modified": 1721265517
 }

@@ -10,7 +10,7 @@
  */
 
 ?>
-  <footer class="py-12 md:py-20 bg-blue-500 text-white">
+  <footer class="py-12 md:py-20 bg-black text-white">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap -mx-4 mb-16">
         <div class="w-full lg:w-4/12 xl:w-5/12 px-4 mb-8 lg:mb-0">
