@@ -98,8 +98,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             'depth' => 2,
             'theme_location' => 'primary',
             'menu_class' => 'py-12 mb-auto',
-            'item_0' => 'mb-6',
-            'link_0' => 'inline-block text-black',
+            'item_0' => 'mb-6 ',
+            'link_0' => 'inline-block text-black text-[2rem] [&.button-outline-white]:!text-[1rem] [&.button-outline-white]:!text-white [&.button-outline-white]:!-mt-2 [&.button-outline-white]:!-translate-x-1',
+            'items-1'=> 'mb-2',
+            'link_1' => 'inline-block text-black',
             'submenu_0' => 'flex-col',
           ]);
         ?>
