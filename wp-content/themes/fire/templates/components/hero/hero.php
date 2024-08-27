@@ -18,7 +18,7 @@
   <div class="container w-full  mx-auto px-4 relative z-[2]">
     <div class="text-center w-full">
       <?php if($kicker):?>
-        <span class="kicker block text-white mb-2">Lorem Ipsum</span>
+        <span class="kicker block text-white mb-2"><?php echo $kicker;?></span>
       <?php endif; ?>
 
       <?php if($title):?>
