@@ -2,6 +2,9 @@
   body {
     @apply bg-tan;
   }
+  html {
+    @apply scroll-smooth;
+  }
   .site {
     @apply flex flex-col min-h-screen;
 
