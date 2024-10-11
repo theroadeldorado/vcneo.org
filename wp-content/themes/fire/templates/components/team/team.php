@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div :style="'transform: translateX(-' + (activeSlide - 1) * 100.5 + '%)'" class="transition-transform duration-500 ease-in-out" style="transform: translateX(-0%)">
+      <div :style="'transform: translateX(-' + (activeSlide - 1) * 100 + '%)'" class="transition-transform duration-500 ease-in-out" style="transform: translateX(-0%)">
         <div class="flex items-center">
           <?php foreach ($team_members as $team_member):
             $name = get_field('full_name', $team_member);
@@ -48,7 +48,7 @@
             $image = get_field('image', $team_member);
             $short_bio = get_field('short_bio', $team_member);
           ?>
-            <div class="flex-shrink-0 mr-6 xl:mr-12 w-full max-w-md">
+            <div class="flex-shrink-0 pr-6 xl:pr-12 w-full max-w-md">
               <?php if($image):?>
                 <?php echo ResponsivePics::get_picture($image['id'], 'sm:400 300|f, md:400 300|f, lg:800 600|f', 'block mb-8 overflow-hidden rounded-t-[3rem]', true, true); ?>
               <?php endif; ?>
