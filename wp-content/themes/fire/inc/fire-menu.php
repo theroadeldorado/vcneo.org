@@ -32,7 +32,12 @@
 
   add_filter('nav_menu_link_attributes', function($atts, $item, $args, $depth) {
     if (property_exists($args, 'link_' . $depth)) {
-      $atts['class'] = $args->{'link_' . $depth};
+      $button_style = get_field('button_style', $item);
+      if ($button_style) {
+        $atts['class'] = $args->{'link_' . $depth} . ' button-outline-white hover:no-underline';
+      } else {
+        $atts['class'] = $args->{'link_' . $depth};
+      }
     }
     if (property_exists($args, 'alpine_link_' . $depth)) {
       $atts[':class'] = $args->{'alpine_link_' . $depth};
@@ -47,5 +52,6 @@
     }
     return $classes;
   }, 10, 3);
+
 
 ?>

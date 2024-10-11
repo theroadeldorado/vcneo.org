@@ -50,7 +50,7 @@ function fire_acf_admin_head() {
             var ulHalfHeight = parentUl.height() / 2;
 
             imageTP = $(this).attr("data-layout");
-            imageFullPath = "<?php echo $module_images_path; ?>/theme/assets/media/thumbnails/" + imageTP + '.png';
+            imageFullPath = "<?php echo $module_images_path; ?>/theme/assets/media/thumbnails/" + imageTP + '.jpg';
             if (checkImage(imageFullPath)) {
               $(".acf-tooltip").append('<div class="imagePreview"><img src="' + imageFullPath + '" /></div>');
               if (hoveredItemBottom > ulHalfHeight) {

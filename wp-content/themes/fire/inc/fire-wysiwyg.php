@@ -54,12 +54,88 @@
         'title' => 'Font Style Presets',
         'items' => array(
           array(
-            'title' => 'Example Preset',
+            'title' => 'Heading 1',
             'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
-            'classes' => 'test'
+            'classes' => 'heading-1'
+          ),
+          array(
+            'title' => 'Heading 2',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'heading-2'
+          ),
+          array(
+            'title' => 'Heading 3',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'heading-3'
+          ),
+          array(
+            'title' => 'Heading 4',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'heading-4'
+          ),
+          array(
+            'title' => 'Heading 5',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'heading-5'
+          ),
+          array(
+            'title' => 'Heading 6',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'heading-6'
+          ),
+          array(
+            'title' => 'Body 3xl',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'text-3xl'
+          ),
+          array(
+            'title' => 'Body 2xl',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'text-2xl'
+          ),
+          array(
+            'title' => 'Body xl',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'text-xl'
+          ),
+          array(
+            'title' => 'Body lg',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'text-lg'
+          ),
+          array(
+            'title' => 'kicker',
+            'selector' => 'p, a, h1, h2, h3, h4, h5, h6, li, span',
+            'classes' => 'kicker'
           ),
         ),
       ),
+      array(
+        'title' => 'Button & Link Styles',
+        'items' => array(
+          array(
+            'title' => 'Button',
+            'selector' => 'a',
+            'classes' => 'button'
+          ),
+          array(
+            'title' => 'Link',
+            'selector' => 'a',
+            'classes' => 'link'
+          ),
+          array(
+            'title' => 'Link Green',
+            'selector' => 'a',
+            'classes' => 'link-green'
+          ),
+          array(
+            'title' => 'Link Blue',
+            'selector' => 'a',
+            'classes' => 'link-blue'
+          ),
+        ),
+      ),
+
       array(
         'title' => 'Spacing Presets',
         'items' => array(
