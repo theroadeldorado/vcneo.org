@@ -3,13 +3,14 @@
   $title = get_sub_field('title');
   $style = get_sub_field('style');
   $team_members = get_sub_field('team_members');
+  $count = $team_members ? count($team_members) : 0;
   $section->add_classes([
     'py-12 md:py-20 bg-coolGray-50 overflow-hidden'
   ]);
 ?>
 
 <?php $section->start(); ?>
-  <div x-data="{ activeSlide: 1, slideCount: 3 }">
+  <div x-data="{ activeSlide: 1, slideCount: <?php echo $count;?> }">
     <div class="container mx-auto px-4">
       <div class="flex flex-wrap -mx-4 items-center mb-20">
         <div class="w-full lg:w-8/12 xl:w-1/2 px-4 mb-8 lg:mb-0">
