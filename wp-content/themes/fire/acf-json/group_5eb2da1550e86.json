@@ -241,6 +241,38 @@
                     "min": "",
                     "max": ""
                 },
+                "layout_67088a3b76572": {
+                    "key": "layout_67088a3b76572",
+                    "name": "stats_with_icons",
+                    "label": "Stats with icons",
+                    "display": "block",
+                    "sub_fields": [
+                        {
+                            "key": "field_67088a3b76574",
+                            "label": "Stats with icons",
+                            "name": "stats_with_icons",
+                            "aria-label": "",
+                            "type": "clone",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "clone": [
+                                "group_64a8c42e2a587"
+                            ],
+                            "display": "seamless",
+                            "layout": "block",
+                            "prefix_label": 0,
+                            "prefix_name": 0
+                        }
+                    ],
+                    "min": "",
+                    "max": ""
+                },
                 "layout_66951bf44d088": {
                     "key": "layout_66951bf44d088",
                     "name": "team",
@@ -297,5 +329,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1721265517
+    "modified": 1728612942
 }
