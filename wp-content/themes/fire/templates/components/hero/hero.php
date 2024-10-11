@@ -59,7 +59,7 @@
 
   <?php if($image):?>
     <div class="absolute inset-0 overflow-hidden w-full h-full opacity-30 z-[1]">
-      <?php echo ResponsivePics::get_picture($image['id'], 'sm:600 400|f, md:900 450|f, lg:1200 400|f, xl:1920 800|f', 'lazyload-effect object-cover w-full h-full', true, true); ?>
+      <?php echo ResponsivePics::get_picture($image['id'], 'sm:600 800|f, md:900 450|f, lg:1200 400|f, xl:1920 800|f', 'lazyload-effect object-cover w-full h-full [&_img]:object-cover [&_img]:w-full [&_img]:h-full', false, false); ?>
     </div>
   <?php endif; ?>
 
